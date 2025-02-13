@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #d60000;
+    font-size: 2em;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Odstęp między przyciskami na starcie */
+}
+
+.btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+}
+
+.yes {
+    background-color: #ff4d4d;
+}
+
+.yes:hover {
+    background-color: #cc0000;
+}
+
+.no {
+    background-color: #333;
+    position: absolute;
+    left: 55%; /* Startowa pozycja obok "Tak" */
+}
+.hidden-message {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 8px; /* Jeszcze mniejsze na telefonie */
+    color: rgba(0, 0, 0, 0.15); /* Bardziej ukryte */
+    max-width: 150px; /* Zapobiega rozciąganiu na małych ekranach */
+    text-align: right;
+}
+
+/* Ulepszenie responsywności strony */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .hidden-message {
+        font-size: 7px; /* Jeszcze mniej widoczne na telefonie */
+        right: 5px;
+    }
+}
+
+
